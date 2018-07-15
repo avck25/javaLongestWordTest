@@ -47,7 +47,7 @@ public class EvaluateLongestWord {
                 tempNumberOfWords = 1;
                 // handling multiple words of same length
             } else if (word.length() == tempLength) {
-                tempLongestWord = tempLongestWord + " " + word;
+                tempLongestWord = tempLongestWord + ", " + word;
                 tempNumberOfWords++;
             }
 

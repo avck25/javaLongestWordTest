@@ -9,12 +9,13 @@ import static org.junit.Assert.*;
  */
 public class EvaluateLongestWordTest {
     EvaluateLongestWord elw;
+
     @Before
     public void initailize() {
         elw = new EvaluateLongestWord();
     }
     @Test
-    public void testFindLongestWord() throws Exception {
+    public void testFindLongestWord()  {
        elw.findLongestWord("programming is the best");
         assertEquals("programming", elw.getLongestWord());
         assertNull(elw.getErrorMessage());
@@ -23,7 +24,7 @@ public class EvaluateLongestWordTest {
     }
 
     @Test
-    public void testFindLongestWordWithNull() throws Exception {
+    public void testFindLongestWordWithNull()  {
         elw.findLongestWord(null);
 
         Assert.assertNotNull( elw.getErrorMessage());
@@ -33,7 +34,7 @@ public class EvaluateLongestWordTest {
     }
 
     @Test
-    public void testFindLongestWordWithOneWord() throws Exception {
+    public void testFindLongestWordWithOneWord()  {
         elw.findLongestWord("yesterday");
 
         Assert.assertEquals(9, elw.getLength());
@@ -43,12 +44,12 @@ public class EvaluateLongestWordTest {
     }
 
     @Test
-    public void testFindMultipleLongestWords() throws Exception {
+    public void testFindMultipleLongestWords()  {
         elw.findLongestWord("Hello there how are you");
 
         Assert.assertEquals(5, elw.getLength());
 
-        assertEquals("Hello there", elw.getLongestWord());
+        assertEquals("Hello, there", elw.getLongestWord());
         assertEquals(2, elw.getNumberOfWords());
 
     }
