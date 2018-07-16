@@ -1,6 +1,7 @@
 /**
  * Created by avck25 on 7/15/2018.
  */
+@SuppressWarnings("SpellCheckingInspection")
 public class EvaluateLongestWord {
 
     private String longestWord;
@@ -30,7 +31,7 @@ public class EvaluateLongestWord {
         sentence = sentence.trim();
 
         //if only one word passed in no need to do the rest of the method
-        if (sentence.indexOf(" ") < 0) {
+        if (!sentence.contains(" ")) {
             this.longestWord = sentence;
             this.length = sentence.length();
             this.numberOfWords = 1;
