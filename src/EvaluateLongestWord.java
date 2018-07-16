@@ -5,10 +5,11 @@ public class EvaluateLongestWord {
 
     private String longestWord;
     private int length;
-    private  int numberOfWords;
+    private int numberOfWords;
     private String errorMessage;
 
-    public EvaluateLongestWord(){}
+    public EvaluateLongestWord() {
+    }
 
     //adding constructor where you can pass in the sentence and it calls findLongestWord
     public EvaluateLongestWord(String sentence) {
@@ -16,16 +17,22 @@ public class EvaluateLongestWord {
     }
 
     public void findLongestWord(String sentence) {
+
+
+
         //Handling null or empty string being passed in setting error message
-        if ( sentence == null || sentence.trim() == "" ) {
+        if (sentence == null || sentence.trim() == "") {
             this.errorMessage = "no sentence passed in can't evaluate";
             return;
         }
         //if called again with not null sentence set error message to null
         this.errorMessage = null;
 
+        //trimming white space so as not to evaluate extra whitespace
+        sentence = sentence.trim();
+
         //if only one word passed in no need to do the rest of the method
-        if (sentence.indexOf(" ") < 0 ) {
+        if (sentence.indexOf(" ") < 0) {
             this.longestWord = sentence;
             this.length = sentence.length();
             this.numberOfWords = 1;
@@ -40,7 +47,7 @@ public class EvaluateLongestWord {
         String[] words = sentence.trim().split(" ");
 
         for (String word : words) {
-            // add
+
             if (tempLength == 0 || word.length() > tempLength) {
                 tempLength = word.length();
                 tempLongestWord = word;
@@ -52,7 +59,6 @@ public class EvaluateLongestWord {
             }
 
 
-
         }
         this.longestWord = tempLongestWord;
         this.length = tempLength;
@@ -62,37 +68,26 @@ public class EvaluateLongestWord {
     }
 
 
-    //getters and setters for private variables
+    //getters  for private variables
     public String getLongestWord() {
         return longestWord;
     }
 
-    public void setLongestWord(String longestWord) {
-        this.longestWord = longestWord;
-    }
 
     public int getNumberOfWords() {
         return numberOfWords;
     }
 
-    public void setNumberOfWords(int numberOfWords) {
-        this.numberOfWords = numberOfWords;
-    }
 
     public int getLength() {
 
         return length;
     }
 
-    public void setLength(int length) {
-        this.length = length;
-    }
 
     public String getErrorMessage() {
         return errorMessage;
     }
 
-    public void setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-    }
+
 }
