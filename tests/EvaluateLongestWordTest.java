@@ -37,7 +37,7 @@ public class EvaluateLongestWordTest {
 
     @Test
     public void testFindLongestWordWithOneWord() {
-        elw.findLongestWord("yesterday");
+        elw.findLongestWord("  yesterday   ");
 
         Assert.assertEquals(9, elw.getLength());
 

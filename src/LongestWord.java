@@ -6,7 +6,7 @@ public class LongestWord {
 
     public static void main(String[] args) {
 
-        EvaluateLongestWord elw = new EvaluateLongestWord(null);
+        EvaluateLongestWord elw = new EvaluateLongestWord("   yesterday  ");
         System.out.println(elw.getLongestWord());
 
 
