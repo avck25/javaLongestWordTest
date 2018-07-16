@@ -8,6 +8,7 @@ import static org.junit.Assert.*;
  * Created by avck25 on 7/15/2018.
  */
 public class EvaluateLongestWordTest {
+
     EvaluateLongestWord elw;
 
     @Before
@@ -64,5 +65,13 @@ public class EvaluateLongestWordTest {
         assertEquals(11, elw.getLength());
         assertEquals(4, elw.getNumberOfWords());
     }
+
+    @Test
+    public void testTrimWhitespaceToGiveError() {
+        elw.findLongestWord("    ");
+        Assert.assertNotNull(elw.getErrorMessage());
+
+    }
+
 
 }

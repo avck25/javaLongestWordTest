@@ -18,10 +18,8 @@ public class EvaluateLongestWord {
 
     public void findLongestWord(String sentence) {
 
-
-
         //Handling null or empty string being passed in setting error message
-        if (sentence == null || sentence.trim() == "") {
+        if (sentence == null || sentence.trim().isEmpty()) {
             this.errorMessage = "no sentence passed in can't evaluate";
             return;
         }
@@ -44,7 +42,7 @@ public class EvaluateLongestWord {
         String tempLongestWord = "";
         int tempNumberOfWords = 0;
 
-        String[] words = sentence.trim().split(" ");
+        String[] words = sentence.split(" ");
 
         for (String word : words) {
 
@@ -57,14 +55,11 @@ public class EvaluateLongestWord {
                 tempLongestWord = tempLongestWord + ", " + word;
                 tempNumberOfWords++;
             }
-
-
         }
+
         this.longestWord = tempLongestWord;
         this.length = tempLength;
         this.numberOfWords = tempNumberOfWords;
-
-
     }
 
 

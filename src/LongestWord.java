@@ -3,12 +3,12 @@
  */
 public class LongestWord {
 
-    
+
     public static void main(String[] args) {
 
-        EvaluateLongestWord elw = new EvaluateLongestWord();
-        elw.findLongestWord(null);
+        EvaluateLongestWord elw = new EvaluateLongestWord(null);
         System.out.println(elw.getLongestWord());
+
 
 
     }
