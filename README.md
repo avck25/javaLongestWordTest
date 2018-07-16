@@ -11,3 +11,6 @@ java -classpath  /out/test/longestWord:/out/test/longestWord/lib/junit-4.12.jar:
 
 But I was unable to test on a mac
 
+Alternatively You can run the program by using this command for Windows after cd into javaLongestWordTest:
+
+java -classpath  out/production/longestWord LongestWord [your sentence you want evaluated]
